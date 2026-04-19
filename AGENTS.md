@@ -23,6 +23,7 @@ All agents must read and follow the detailed guidelines in the `/docs` directory
 ALWAYS refer to the relevant .md file BEFORE generating any code:
 
 - **Authentication** - `/docs/authentication.md` - Clerk authentication, protected routes, redirects
+- **UI Components** - `/docs/ui-components.md` - shadcn/ui usage, component patterns
 
 ## 🎯 Quick Reference
 
