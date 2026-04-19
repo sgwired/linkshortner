@@ -19,70 +19,10 @@ This document provides comprehensive coding standards and guidelines for AI assi
 ## 📚 Detailed Guidelines
 
 ### Core Development Standards
-All agents must read and follow the detailed guidelines in the `/docs` directory:
+All agents must read and follow the detailed guidelines in the `/docs` directory
+ALWAYS refer to the relevant .md file BEFORE generating any code:
 
-#### 1. [Next.js Guidelines](docs/nextjs.md)
-- App Router architecture
-- Server vs Client Components
-- Data fetching patterns
-- Route handlers and API routes
-- Image optimization
-- Metadata management
 
-#### 2. [TypeScript Guidelines](docs/typescript.md)
-- Strict mode requirements
-- Type safety standards
-- Component typing patterns
-- Error handling
-- Utility types usage
-
-#### 3. [Component Guidelines](docs/components.md)
-- shadcn/ui with Base UI architecture
-- CVA (Class Variance Authority) usage
-- Server vs Client component patterns
-- Composition patterns
-- Props and ref forwarding
-- Accessibility requirements
-
-#### 4. [Database Guidelines](docs/database.md)
-- Drizzle ORM patterns
-- Schema definition standards
-- Query patterns (select, insert, update, delete)
-- Relations and joins
-- Migrations
-- Type safety with database operations
-
-#### 5. [Styling Guidelines](docs/styling.md)
-- Tailwind CSS 4 conventions
-- Design tokens and CSS variables
-- Dark mode implementation
-- Component styling patterns
-- Responsive design (mobile-first)
-- Performance optimization
-
-#### 6. [Project Structure Guidelines](docs/project-structure.md)
-- Directory organization
-- File naming conventions
-- Import path patterns (@/* aliases)
-- Component organization
-- Feature-based structuring
-
-#### 7. [Authentication Guidelines](docs/authentication.md)
-- Clerk integration patterns
-- Auth state management
-- Middleware protection
-- User data handling
-- Database sync with webhooks
-- Role-based authorization
-
-#### 8. [Best Practices & Patterns](docs/best-practices.md)
-- Error handling strategies
-- Form handling with server actions
-- Data validation with Zod
-- Loading states and skeletons
-- Performance optimization
-- Security best practices
-- Accessibility standards
 
 ## 🎯 Quick Reference
 
