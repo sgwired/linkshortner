@@ -1,5 +1,5 @@
 ---
-name: instructions-generator
+name: Instructions Generator
 description: This agent generates highly specific agent instructions files for the /doc directory
 argument-hint: The inputs this agent expects, e.g., "a task to implement" or "a question to answer".
 tools: ['read', 'agent', 'edit', 'search', 'web'] # specify the tools this agent can use. If not set, all enabled tools are allowed.
