@@ -6,6 +6,28 @@ This document provides comprehensive coding standards and guidelines for AI assi
 ## 🚨 Critical Notice
 **This project uses Next.js 16.2.4** which has breaking changes from earlier versions. Always consult the relevant documentation before implementing features.
 
+## ⚠️ MANDATORY REQUIREMENT - READ FIRST ⚠️
+
+**🔴 STOP: Before generating ANY code, you MUST read the relevant instruction files in the `/docs` directory.**
+
+This is not optional. Failure to read the appropriate documentation BEFORE coding will result in:
+- ❌ Incorrect implementations that don't follow project patterns
+- ❌ Breaking changes that violate established conventions
+- ❌ Wasted time rewriting code to match standards
+- ❌ Introduction of bugs and inconsistencies
+
+### Required Reading Process:
+1. **IDENTIFY** which area of the codebase you're working on
+2. **READ** the corresponding `/docs/*.md` file(s) COMPLETELY
+3. **UNDERSTAND** the patterns, rules, and examples provided
+4. **ONLY THEN** begin writing code that follows those guidelines
+
+### Available Documentation:
+- **Authentication** → `/docs/authentication.md` - Read BEFORE working with auth, protected routes, or user data
+- **UI Components** → `/docs/ui-components.md` - Read BEFORE creating or modifying components
+
+**No exceptions. No shortcuts. Read the docs first, every time.**
+
 ## Tech Stack
 - **Framework**: Next.js 16.2.4 (App Router)
 - **Runtime**: React 19.2.4
@@ -19,11 +41,22 @@ This document provides comprehensive coding standards and guidelines for AI assi
 ## 📚 Detailed Guidelines
 
 ### Core Development Standards
-All agents must read and follow the detailed guidelines in the `/docs` directory
-ALWAYS refer to the relevant .md file BEFORE generating any code:
 
+**🚨 CRITICAL: Read `/docs` files BEFORE coding - This is non-negotiable! 🚨**
+
+Every agent working on this project MUST:
+1. **FIRST** identify which topic area they're working on
+2. **SECOND** read the ENTIRE corresponding `/docs/*.md` file
+3. **THIRD** reference the specific patterns and rules while coding
+4. **NEVER** skip this process or assume you know the patterns
+
+### Documentation Reference:
 - **Authentication** - `/docs/authentication.md` - Clerk authentication, protected routes, redirects
+  - Read BEFORE: Adding auth, protecting routes, accessing user data, handling redirects
 - **UI Components** - `/docs/ui-components.md` - shadcn/ui usage, component patterns
+  - Read BEFORE: Creating components, using UI libraries, styling patterns
+
+**Reminder: If you haven't read the relevant doc file yet, STOP and read it now.**
 
 ## 🎯 Quick Reference
 
@@ -107,12 +140,17 @@ import { auth, currentUser } from "@clerk/nextjs/server"
 
 ## 🔍 Before Writing Code
 
-1. **Check existing patterns** - Look for similar implementations
-2. **Read relevant guide** - Consult `/docs` for specific guidelines
-3. **Verify Next.js version** - This is Next.js 16.2.4, not earlier versions
-4. **Consider Server vs Client** - Default to Server Components
-5. **Type everything** - Use TypeScript strict mode properly
-6. **Test both themes** - Ensure dark mode compatibility
+**❗ FIRST AND FOREMOST:** Read the relevant `/docs/*.md` file for your task area
+   - Authentication work? → Read `/docs/authentication.md` completely
+   - UI/Component work? → Read `/docs/ui-components.md` completely
+   - Don't skip this. Don't skim. Read thoroughly.
+
+Then proceed with:
+1. **Check existing patterns** - Look for similar implementations in the codebase
+2. **Verify Next.js version** - This is Next.js 16.2.4, not earlier versions
+3. **Consider Server vs Client** - Default to Server Components
+4. **Type everything** - Use TypeScript strict mode properly
+5. **Test both themes** - Ensure dark mode compatibility
 
 ## 📝 File Creation Checklist
 
@@ -150,16 +188,17 @@ import { auth, currentUser } from "@clerk/nextjs/server"
 
 ## 🚫 Common Pitfalls to Avoid
 
-1. **Don't** use old Next.js patterns (pages directory, getServerSideProps, etc.)
-2. **Don't** make Client Components unnecessarily
-3. **Don't** use inline styles instead of Tailwind
-4. **Don't** use `any` type in TypeScript
-5. **Don't** forget to handle loading and error states
-6. **Don't** expose sensitive data to client
-7. **Don't** skip authentication checks
-8. **Don't** ignore TypeScript errors
-9. **Don't** forget dark mode support
-10. **Don't** use raw SQL with user input
+1. **Don't** skip reading the `/docs` files before coding - This is THE most common mistake
+2. **Don't** use old Next.js patterns (pages directory, getServerSideProps, etc.)
+3. **Don't** make Client Components unnecessarily
+4. **Don't** use inline styles instead of Tailwind
+5. **Don't** use `any` type in TypeScript
+6. **Don't** forget to handle loading and error states
+7. **Don't** expose sensitive data to client
+8. **Don't** skip authentication checks
+9. **Don't** ignore TypeScript errors
+10. **Don't** forget dark mode support
+11. **Don't** use raw SQL with user input
 
 ## 🎨 Code Style
 
@@ -181,7 +220,7 @@ import { auth, currentUser } from "@clerk/nextjs/server"
 
 ---
 
-**Last Updated**: April 19, 2026
+**Last Updated**: April 22, 2026
 **Project Version**: 0.1.0
 
 For questions or clarifications about these guidelines, refer to the specific documentation files in `/docs`.
