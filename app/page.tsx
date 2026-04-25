@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
-import Link from "next/link";
+import { SignInButton } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -35,14 +35,11 @@ export default async function Home(): Promise<React.JSX.Element> {
             Track every click, analyze your audience, and optimize your content strategy.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row">
-            <Link href="/dashboard">
+            <SignInButton mode="modal">
               <Button size="lg" className="h-12 px-8 text-base">
                 Get Started Free
               </Button>
-            </Link>
-            <Button variant="outline" size="lg" className="h-12 px-8 text-base">
-              Learn More
-            </Button>
+            </SignInButton>
           </div>
         </div>
       </section>
@@ -206,11 +203,11 @@ export default async function Home(): Promise<React.JSX.Element> {
               Join thousands of users who trust our platform to manage their links. 
               Create your first short link in seconds.
             </p>
-            <Link href="/dashboard">
+            <SignInButton mode="modal">
               <Button size="lg" className="h-12 px-8 text-base">
                 Start Shortening for Free
               </Button>
-            </Link>
+            </SignInButton>
           </CardContent>
         </Card>
       </section>
